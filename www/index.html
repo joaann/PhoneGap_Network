@@ -1,0 +1,38 @@
+﻿<!DOCTYPE html>
+<html ng-app="networkApp">
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *" />
+
+    <link rel="stylesheet" type="text/css" href="css/bootstrap/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="css/bootstrap/bootstrap-theme.min.css" />
+    <link rel="stylesheet" type="text/css" href="css/index.css" />
+    <title>Network</title>
+</head>
+<body>
+    <div class="container-fluid" ng-controller="mainCtrl">
+        <h1>Network Status</h1>
+        Type of network connection: {{status}}<br/>
+        <h3>{{time}}</h3>
+        <p class="text-center">
+            <button class="button-btn" ng-click="checkConnection(); $log.debug('Got connection')">Check network connection</button>
+        </p>
+    </div>
+
+    <!-- Cordova reference, this is added to your app when it's built. -->
+    <script src="cordova.js"></script>
+    <script src="scripts/platformOverrides.js"></script>
+
+    <script src="lib/jquery/jquery-1.9.1.min.js"></script>
+    <script src="lib/bootstrap/bootstrap.min.js"></script>
+    <script src="lib/angularjs/angular.min.js"></script>
+    <script src="lib/angularjs/angular-route.min.js"></script>
+
+    <script src="scripts/index.js"></script>
+    <script src="scripts/app.js"></script>
+
+    <!-- controllers -->
+    <script src="scripts/controllers/mainCtrl.js"></script>
+
+</body>
+</html>
